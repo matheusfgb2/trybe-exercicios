@@ -5,7 +5,7 @@
 
 Dado um arquivo com dados de regiões, estados e cidades, crie uma função (mapCities) que retorna um objeto no qual as chaves são as siglas das regiões (N, NE, CW, SE e S) e os valores são arrays compostos por objetos com o nome da cidade e o nome do estado.
 
-``` {
+```{
   N: [
     { city: 'Manaus', state: 'Amazonas' },
     { city: 'Belém', state: 'Pará' },
@@ -21,5 +21,5 @@ Dado um arquivo com dados de regiões, estados e cidades, crie uma função (map
     { city: 'Jericoacoara', state: 'Ceará' }
   ],
   S: [ { city: 'Cascavel', state: 'Paraná' } ]
-} ```
+}``` 
 
