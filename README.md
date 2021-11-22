@@ -20,6 +20,6 @@ Dado um arquivo com dados de regiões, estados e cidades, crie uma função (map
     { city: 'Touros', state: 'Rio Grande do Norte' },
     { city: 'Jericoacoara', state: 'Ceará' }
   ],
-  S: [ { city: 'Cascavel', state: 'Paraná' } ]
+  S: [ { city: 'Cascavel', state: 'Paraná' } ],
 }``` 
 
