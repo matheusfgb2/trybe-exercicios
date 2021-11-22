@@ -23,11 +23,3 @@ Dado um arquivo com dados de regiões, estados e cidades, crie uma função (map
   S: [ { city: 'Cascavel', state: 'Paraná' } ]
 } ```
 
-### Exercício 2
-
-Crie uma função que recebe como parâmetro a sigla de uma região e retorne um array de objetos contento o nome do estado e o nome da cidade. 
-``` [
-    { city: 'Manaus', state: 'Amazonas' },
-    { city: 'Belém', state: 'Pará' },
-    { city: 'Porto Nacional', state: 'Tocantins' }
-] ```
