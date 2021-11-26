@@ -23,4 +23,4 @@ Dado um arquivo com dados de regiões, estados e cidades, crie uma função (map
   ],
   S: [ { city: 'Cascavel', state: 'Paraná' } ],
 }
-``` 
+
