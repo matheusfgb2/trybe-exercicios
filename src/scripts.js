@@ -27,18 +27,3 @@ const { cities, states, regions } = require('../data/data.js');
 const mapCities = () => {
 
 }
-
-/**
- * Crie uma função que recebe como parâmetro a sigla de uma região e retorne um array de objetos
- * contento o nome do estado e o nome da cidade. 
- * 
- *[
-    { city: 'Manaus', state: 'Amazonas' },
-    { city: 'Belém', state: 'Pará' },
-    { city: 'Porto Nacional', state: 'Tocantins' }
-* ]
-*/  
-
-const getCitiesByRegion = (region) => {
-
-};
