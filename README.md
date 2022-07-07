@@ -1,4 +1,4 @@
-#Mentoria de Revisão Zoo Functions - Turma 17
+#Mentoria de Revisão Zoo Functions
 
 ## Exercícios
 ### Exercício 1
