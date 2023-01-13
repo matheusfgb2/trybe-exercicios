@@ -1,4 +1,9 @@
-# sd-030-a-live-lectures
+# Repositório de aulas ao vivo para estudantes da Turma 30 - Tribo A
 
-Turma 30A
-Qualquer uma
+Este repositório armaena os códigos e scripts fornecidos durante as aulas ao vivo pelos especialistas da Trybe.
+
+## Começando
+
+Basta clonar o repositório
+
+git clone git@github.com:tryber/sd-30-a-live-lectures.git
