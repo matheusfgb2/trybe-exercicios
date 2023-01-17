@@ -8,7 +8,8 @@ div:nth-of-type(2) {
     color: red;
 }
 div:nth-of-type(3) {
-    color: rgb(150, 200, 0)
+    color: rgb(150, 200, 0);
+    font-size: xx-large;
 }
 div:nth-of-type(4) {
     color: darkblue
@@ -23,11 +24,14 @@ div:nth-of-type(2) > h3 {
     font-size: 30px;
 }
 div:nth-of-type(3) > h3 {
-    font-style: italic;
+    text-align: center;
 }
 div:nth-of-type(4) > h3 {
     font-family: Impact;
 }
 div:nth-of-type(5) > h3 {
     background-color: black;
+}
+div:nth-of-type(odd) > h3 {
+    font-style: italic;
 }
