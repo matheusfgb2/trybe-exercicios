@@ -1,3 +1,6 @@
 h1, p {
     text-align: center;
 }
+.listas:hover {
+    background-color: yellow;
+}
