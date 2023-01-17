@@ -7,3 +7,6 @@ h1, p {
 .listas:active {
     font-family: 'Comic Sans MS';
 }
+ol, ul {
+    list-style:none;
+}
