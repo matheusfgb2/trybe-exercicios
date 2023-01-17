@@ -4,3 +4,6 @@ h1, p {
 .listas:hover {
     background-color: yellow;
 }
+.listas:active {
+    font-family: 'Comic Sans MS';
+}
