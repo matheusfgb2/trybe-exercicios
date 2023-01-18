@@ -7,3 +7,10 @@ ol li:nth-last-of-type(even) {
 ol li:nth-last-of-type(odd) {
     text-transform: uppercase;
 }
+h3, h2, h1 {
+    color: red;
+}
+h1.italic {
+    font-size: 40px;
+    border: 1px solid black
+}
