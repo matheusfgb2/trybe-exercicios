@@ -6,6 +6,6 @@ Este repositório armazena os códigos e scripts fornecidos durante as aulas ao 
 
 Basta clonar o repositório
 
-git clone git@github.com:tryber/sd-30-a-live-lectures.git
+git clone git@github.com/tryber/sd-30-a-live-lectures.git
 
 Lembrando que a Turma 30 A é a turma Supimpa, Maravilinda, Tryberzera, Dobalacobaco e Cheirosa.
