@@ -45,16 +45,47 @@ for (let currentNumber = 2; currentNumber <= 50; currentNumber += 1) {
 }
 console.log(greatestPrime);
 
-//bonus 1: Escreva um programa que, dado um valor n qualquer, seja n > 1, imprima na tela um quadrado feito de asteriscos de lado de tamanho n. Por exemplo:
-let n = 7;
+//bonus 1: Escreva um programa que, dado um valor n qualquer, seja n > 1, imprima na tela um quadrado feito de asteriscos de lado de tamanho n.
+let n = 8;
 let fileira = '';
 if (n > 1) {
   for (let index = 0; index < n; index += 1) {
     while (fileira.length !== n) {
-      fileira += '#';
+      fileira += '*';
     }
     console.log(fileira);
   }
 } else {
   console.log('Insira um valor maior do que 1.');
 }
+console.log('');
+fileira = '';
+
+//bonus 2: Faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base.
+if (n > 1) {
+  for (let index = 0; index < n; index += 1) {
+      fileira += '*';
+      console.log(fileira);
+  }
+} else {
+  console.log('Insira um valor maior do que 1.');
+}
+console.log('');
+fileira = '';
+
+//bonus 3: Agora inverta o lado do triângulo.
+for (let index = 1; index < n; index += 1) {
+  let numeroEspacos = n - index;
+  for (let index1 = 0; index1 < numeroEspacos; index1 += 1) {
+    fileira += ' ';
+  }
+  for (let index3 = 1; index3 <= index; index3 += 1) {
+    fileira += '*'
+  }
+  console.log(fileira);
+  fileira = '';
+}
+for (index = 0; index < n; index += 1) {
+  fileira += '*';
+}
+console.log(fileira);
