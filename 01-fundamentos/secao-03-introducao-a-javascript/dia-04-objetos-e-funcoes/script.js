@@ -34,3 +34,63 @@ let car = {
 for (cars in car) {
   console.log(cars, car[cars]);
 }
+
+/// 🚀 Exercícios - objetos e for/in
+let leitor = {
+  nome: 'Julia',
+  sobrenome: 'Pessoa',
+  idade: 21,
+  livrosFavoritos: [
+    {
+      titulo: 'O Pior Dia de Todos',
+      autor: 'Daniela Kopsch',
+      editora: 'Tordesilhas',
+    },
+  ],
+};
+console.log(`O livro de ${leitor.nome} ${leitor.sobrenome} se chama '${leitor.livrosFavoritos[0].titulo}'`);
+
+leitor.livrosFavoritos.push({
+  titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+  autor: 'JK Rowling',
+  editora: 'Rocco',
+});
+console.log(`${leitor.nome} tem ${leitor.livrosFavoritos.length} livros favoritos`);
+
+/// Exercícios - bônus
+const romanToNumber = {
+  I: 1,
+  II: 2,
+  III: 3,
+  IV: 4,
+  V: 5,
+  VI: 6,
+  VII: 7,
+  VIII: 8,
+  IX: 9,
+  X: 10,
+  XL: 40,
+  L: 50,
+  XC: 90,
+  C: 100,
+  CD: 400,
+  D: 500,
+  CM: 900,
+  M: 1000
+}
+
+const convertRomanToNumber = (array) => {
+  let numberSum = 0;
+  let numberSub = 0;
+  let newArray = [];
+  for (indexArr = 0; indexArr < array.length; indexArr += 1) {
+    for (indexStr = 0; indexStr < array[indexArr].length; indexStr += 1) {
+      if (romanToNumber[indexArr][indexStr] === 'I')
+      numberSum += romanToNumber[array[indexArr][indexStr]];
+    }
+    newArray.push(numberSum);
+    numberSum = 0;
+  }
+  return console.log(newArray);
+}
+convertRomanToNumber(['I', 'II', 'III', 'XVIII', 'MV', 'VII']);
