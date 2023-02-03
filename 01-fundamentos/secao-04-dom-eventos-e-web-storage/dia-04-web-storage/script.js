@@ -1,5 +1,3 @@
-
-
 // Etapas:
 // Parte 1: Criar conteúdo do header
 //  1 - Criar elemento header
@@ -126,5 +124,19 @@ for (button of buttons) {
     currentStyleProperty = listClasses[currentListId];
     //Alteração do estilo na main
     main['style'][currentStyleProperty] = property;
+    //Local storage
+    localStorage.setItem(currentStyleProperty, property);
+    // console.log(localStorage.key(currentStyleProperty));
   });
 };
+//Atribuir valores da localStorage ao body
+
+//Iteração de todos os elementos da localStorage através da propriedade key
+for (index = 0; index < localStorage.length; index += 1) {
+  //Atribuição do atributo do estilo numa variável
+  const styleAtribute = localStorage.key(index);
+  //Atribuição do valor do estilo numa variável
+  const styleValue = localStorage.getItem(localStorage.key(index));
+  //Alteração do estilo da main
+  main.style[styleAtribute] = styleValue;
+}
