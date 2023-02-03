@@ -20,6 +20,7 @@ const fontFamilyArray = ['Arial', 'Times New Roman'];
 const createList = (idName) => {
   const list = document.createElement('ul');
   list.id = idName;
+  list.className = 'list';
   headerSection.appendChild(list);
 };
 //    1 - Criar lista com a id 'bg-color-list'
