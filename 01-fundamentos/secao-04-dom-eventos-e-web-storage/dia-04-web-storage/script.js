@@ -32,7 +32,6 @@ createList('font-color-list');
 createList('font-size-list');
 createList('line-height-list');
 createList('font-family-list');
-createList('font-color-list');
 //  5 - Criar itens das listas (criar função createListItem)
 //    1 - Iterar array correspondente
 //    2 - Criar variável com o tipo de elemento 'li' e 'button'
@@ -51,6 +50,7 @@ const createListItem = (array, listID, paragraph) => {
     //Criando li
     const listItem = document.createElement('li');
     listItem.id = `'${item}-li'`;
+    listItem.className = 'list-item';
     //Criando botão
     const button = document.createElement('button');
     button.innerHTML = item;
