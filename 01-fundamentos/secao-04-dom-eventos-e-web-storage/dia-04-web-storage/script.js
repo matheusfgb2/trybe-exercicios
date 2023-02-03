@@ -39,13 +39,35 @@ createList('font-color-list');
 //    3 - Adicionar classe correspondente
 //    4 - Adicionar innerHTML com conteúdo iterado
 //    5 - AppendChild na lista correspondente
-const createListItem = (array) => {
+const createListItem = (array, listID, paragraph) => {
+  //Capturando lista
+  const list = document.getElementById(listID);
+  //Criando parágrafo
+  const p = document.createElement('p');
+  p.innerHTML = paragraph;
+  //Colocando parágrafo na lista
+  list.appendChild(p);
   for (item of array) {
-    
+    //Criando li
+    const listItem = document.createElement('li');
+    listItem.id = `'${item}-li'`;
+    //Criando botão
+    const button = document.createElement('button');
+    button.innerHTML = item;
+    button.className = 'button';
+    //Colocando botão no li
+    listItem.appendChild(button);
+    //Colocando li na lista
+    list.appendChild(listItem);
   }
 }
-//  6 - Ajustar style da section 'event-lists'
+createListItem(bgColorArray, 'bg-color-list', 'Cor de fundo');
+createListItem(fontColorArray, 'font-color-list', 'Cor da fonte');
+createListItem(fontSizeArray, 'font-size-list', 'Tamanho da fonte');
+createListItem(lineHeightArray, 'line-height-list', 'Espaçamento entre linhas');
+createListItem(fontFamilyArray, 'font-family-list', 'Tipo da fonte');
+//  6 - Ajustar styles da section 'event-lists'
 //    1 - display
 //    2 - padding
-
+//    3 - button
 // Parte 2: Criar conteúdo do main
