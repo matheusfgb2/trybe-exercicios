@@ -62,7 +62,7 @@
       <button class="btn btn-danger" type="reset" id="clear-btn">Limpar</button>
     </form>
   </main>
-  <!-- <script src="script.js"></script> -->
+  <script src="script.js"></script>
   <script src="flatpickr.js"></script>
   <script>
     const  config = {
@@ -76,31 +76,35 @@
   </script>
   
     <script>
-      const validate = new window.JustValidate('#main-form');
-      validation
-        .addField('#fullName', [
-          {
-            rule: 'required',
-          },
-          {
-            rule: 'minLength',
-            value: 3,
-          },
-          {
-            rule: 'maxLength',
-            value: 30,
-          },
-        ])
-        .addField('#email', [
-          {
-            rule: 'required',
-            errorMessage: 'Coloque seu email.',
-          },
-          {
-            rule: 'email',
-            errorMessage: 'Email inválido.',
-          },
-        ]);
+const validator = new JustValidate('#main-form');
+
+validator
+  .addField('#fullName', [
+    {
+      rule: 'required',
+    },
+    {
+      rule: 'minLength',
+      value: 3,
+    },
+    {
+      rule: 'maxLength',
+      value: 15,
+    },
+  ])
+  .addField('#email', [
+    {
+      rule: 'required',
+    },
+    {
+      rule: 'email',
+    },
+  ])
+  .addField('#agreement', [
+    {
+      rule: 'required',
+    },
+  ]);
     </script>
 </body>
 </html>
