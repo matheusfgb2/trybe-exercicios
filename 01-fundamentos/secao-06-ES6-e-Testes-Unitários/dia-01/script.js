@@ -46,10 +46,13 @@ return textCustomerInfo;
 // Complete a função orderModifier() para que seu retorno seja similar a 
 // 'Olá Luiz Silva, o total do seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ 50,00.';
 // Modifique o nome da pessoa compradora para Luiz Silva;
+order.name = 'Luiz Silva';
+order.payment.total = '50';
 // Modifique o valor total da compra para R$ 50,00.
 const orderModifier = (order) => {
   const orders = Object.keys(order.order.pizza);
   const orderModifierText = `Olá, ${order.name}, o total do seu pedido de ${orders[0]}, ${orders[1]} e ${order.order.drinks.coke.type} é R$ ${order.payment.total},00.`
+  return orderModifierText;
 };
 
 orderModifier(order);
