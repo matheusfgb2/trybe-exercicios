@@ -8,24 +8,36 @@
 *, *:before, *:after {
   box-sizing: inherit;
 }
-body {
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: red;
+    font-size: 20px;
+    margin: 50px;
+  }
+  section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  figure {
+    margin: 0 5px 10px;
+    width: 30%;
+  }
 }
-article {
+
+@media screen and (min-width: 992px) {
+  body {
+    background-color: green;
+    font-size: 25px;
+    margin: 30px;
+    max-width: 90%;
+  }
 }
-h1 {
-}
-h2 {
-}
+
 img {
 	max-width: 100%;
 }
-main {
-}
-section {
-}
-figure {
-	margin: 0;
-}
+
 figcaption {
   font-size: .8em;
 }
