@@ -5,3 +5,142 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+* {
+  margin: 0;
+}
+
+header , h1 , h2 , h3 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 19px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 17px;
+  padding: 10px 0 10px;
+}
+
+header, footer {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  justify-content: flex-end;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+header p {
+  padding-bottom: 5px;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.asides {
+  padding: 10px 0 10px;
+  background-color: rgb(212, 214, 214);
+  line-height: 23px;
+  font-size: 15px;
+}
+
+.main-content {
+  padding: 10px 0 10px;
+  background-color: rgb(212, 214, 214);
+}
+
+.main-content p {
+  margin: 20px;
+  text-align: justify;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+footer {
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  
+  header {
+    font-size: 20px;
+  }
+
+  .asides {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+    padding-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .main-content p {
+    margin: 30px;
+    font-size: 20px;
+  }
+
+  footer p {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  
+  header {
+    font-size: 20px;
+  }
+
+  .asides {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .aside-two {
+    align-self: flex-start;
+    line-height: 60px;
+  }
+
+  h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .main-content p {
+    margin: 20px 80px 20px 80px;
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  footer p {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
