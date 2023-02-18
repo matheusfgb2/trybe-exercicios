@@ -61,5 +61,11 @@ const techList = (arr, str) => {
   }
   return list;
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
-module.exports = { myRemove, myFizzBuzz, encode, decode, techList };
+
+const hydrate = (str) => {
+  const n = str.match(/\d+/g).reduce((a, b) => +a + +b)
+  return `${n} ${n > 1 ? 'copos de água' : 'copo de água'}`; 
+}
+console.log(hydrate('1'));
+
+module.exports = { myRemove, myFizzBuzz, encode, decode, techList, hydrate };
