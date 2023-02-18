@@ -1,5 +1,4 @@
-const { myRemove, myFizzBuzz } = require('./script');
-
+const { myRemove, myFizzBuzz, encode, decode } = require('./script');
 
 describe('Testando a função myRemove', () => {
   test('A função, ao receber ([1, 2, 3, 4], 3), deve retornar [1, 2, 4]', () => {
@@ -29,4 +28,53 @@ describe('Testando a função myFizzBuzz', () => {
     expect(myFizzBuzz(35)).toBe('buzz');
     expect(myFizzBuzz(50)).toBe('buzz');
   });
+});
+
+describe('Testando as funções encode e decode', () => {
+  test('Verificando se ambas são funções', () => {
+    expect(typeof encode).toBe('function');
+    expect(typeof decode).toBe('function');
+  });
+  test('Verificando se a função encode retorna os valores corretos para a, e, i, o, u', () => {
+    expect(encode('Olá, tudo bem?')).toBe('Olá, t5d4 b2m?');
+    expect(encode('Sou tryber de coração, amigo')).toBe('S45 tryb2r d2 c4r1çã4, 1m3g4');
+  })
+  test('Verificando se a função decode retorna os valores corretos para 1, 2, 3, 4, 5', () => {
+    expect(decode('Olá, t5d4 b2m?')).toBe('Olá, tudo bem?');
+    expect(decode('S45 tryb2r d2 c4r1çã4, 1m3g4')).toBe('Sou tryber de coração, amigo');
+  })
+  test('Verificando se as demais letras e números não são convertidas nas funções', () => {
+    expect(encode('d')).toBe('d');
+    expect(encode('f')).toBe('f');
+    expect(encode('g')).toBe('g');
+    expect(encode('h')).toBe('h');
+    expect(encode('j')).toBe('j');
+    expect(decode('6')).toBe('6');
+    expect(decode('96')).toBe('96');
+    expect(decode('69')).toBe('69');
+    expect(decode('78')).toBe('78');
+    expect(decode('89')).toBe('89');
+  })
+
+  const randomString = (name) => {
+    const str = name === 'encode' ? 'Esta é uma string aleatória para testar a função' : 'Est1 é 5m1 str3ng 1l21tór31 p1r1 t2st1r 1 f5nçã4';
+    let nStr = '';
+    let n = Math.floor(Math.random() * str.length);
+    for (let i = 0; i < n; i++) {
+      nStr += str[i];
+    }
+    return nStr;
+  }
+  
+  const frase1 = randomString('encode');
+  const frase2 = randomString('encode');
+  const frase3 = randomString('decode');
+  const frase4 = randomString('decode');
+
+  test('Verificando se as entradas e saídas das funções tem o mesmo tamanho em frases geradas aleatoriamente', () => {
+    expect(encode(frase1).length).toBe(frase1.length);
+    expect(encode(frase2).length).toBe(frase2.length);
+    expect(decode(frase3).length).toBe(frase3.length);
+    expect(decode(frase4).length).toBe(frase4.length);
+  })
 });
