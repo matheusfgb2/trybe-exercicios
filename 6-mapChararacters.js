@@ -11,8 +11,16 @@ const data = require('./database');
   }
 */
 
+const getSpecieNameById = (specieId) => data.species.find(specie => specie.id === specieId).name;
+
 const mapCharacters = () => {
-  
+  return data.characters.map(char => ({
+    id: char.id,
+    name: char.name,
+    gender: char.gender,
+    species: getSpecieNameById(char.speciesId),
+    powers: char.powers,
+  }));
 };
 
 console.log(mapCharacters());
