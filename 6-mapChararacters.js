@@ -12,19 +12,7 @@ const data = require('./database');
 */
 
 const mapCharacters = () => {
-  return data.characters.map((character) => {
-    // descobrir a espécie de cada personagem
-    const species = data.species.find((especie) => especie.id === character.speciesId);
   
-    // retornando o objeto com a estrutura esperada
-    return {
-      id: character.id,
-      name: character.name,
-      gender: character.gender,
-      species: species.name,
-      powers: character.powers,
-    };
-  });
 };
 
 console.log(mapCharacters());
