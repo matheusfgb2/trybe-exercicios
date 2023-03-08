@@ -1,4 +1,4 @@
-const data = require('../data/data.js');
+const { regions, states, cities } = require('../data/data.js');
 
 /**
  * Dado um arquivo com dados de regiões, estados e cidades, crie uma função
@@ -24,3 +24,16 @@ const data = require('../data/data.js');
   S: [ { city: 'Cascavel', state: 'Paraná' } ]
 }
  */ 
+const mapCities = () => regions.reduce((acc, { short }) => {
+  const citiesByRegion = cities.filter(({ region }) => region === short);
+  if (citiesByRegion.length > 0) {
+    acc[short] = citiesByRegion;
+    acc[short] = acc[short].map(({ name, state }) => ({
+      city: name,
+      state: states.find(({ short }) => short === state).name,
+    }))
+  }
+  return acc;
+}, {});
+
+console.log(mapCities());
