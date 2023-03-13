@@ -21,9 +21,12 @@ draftBtn.addEventListener(('click'), () => {
       insertHero(data);
 
     })
-    .catch(error => {
-      Swal.fire('Personagem não encontrado na base de dados');
-    })
+    .catch((error) => Swal.fire({
+      title: 'Hero not found',
+      text: error.message,
+      icon: 'error',
+      confirmButtonText: 'Cool',
+    }));
 
 })
 
